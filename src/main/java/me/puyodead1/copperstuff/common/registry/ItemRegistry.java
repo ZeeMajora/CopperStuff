@@ -2,8 +2,7 @@ package me.puyodead1.copperstuff.common.registry;
 
 import me.puyodead1.copperstuff.CopperStuff;
 import me.puyodead1.copperstuff.common.utils.CSTIer;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,4 +24,8 @@ public class ItemRegistry implements IRegistry {
     public static final Item.Properties ITEM_PROPERTIES = new Item.Properties().tab(CommonRegistry.CREATIVE_MODE_TAB);
 
     public static final RegistryObject<Item> COPPER_PICKAXE = ITEMS.register("copper_pickaxe", () -> new PickaxeItem(CSTIer.COPPER, 1, -2.8F, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> COPPER_AXE = ITEMS.register("copper_axe", () -> new AxeItem(CSTIer.COPPER, 6.0F, -3.0F, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> COPPER_SHOVEL = ITEMS.register("copper_shovel", () -> new ShovelItem(CSTIer.COPPER, 1.5F, -3.0F, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> COPPER_HOE = ITEMS.register("copper_hoe", () -> new HoeItem(CSTIer.COPPER, -1, -2.0F, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> COPPER_SWORD = ITEMS.register("copper_sword", () -> new SwordItem(CSTIer.COPPER, 3, -2.4F, ITEM_PROPERTIES));
 }

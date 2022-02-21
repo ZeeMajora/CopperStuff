@@ -30,5 +30,45 @@ public class CSRecipes extends RecipeProvider {
                 .group(CopperStuff.MOD_ID)
                 .unlockedBy("copper", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
                 .save(consumer);
+
+        ShapedRecipeBuilder.shaped(ItemRegistry.COPPER_AXE.get())
+                .pattern("cc ")
+                .pattern("cs ")
+                .pattern(" s ")
+                .define('c', Tags.Items.INGOTS_COPPER)
+                .define('s', Items.STICK)
+                .group(CopperStuff.MOD_ID)
+                .unlockedBy("copper", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(ItemRegistry.COPPER_HOE.get())
+                .pattern("cc ")
+                .pattern(" s ")
+                .pattern(" s ")
+                .define('c', Tags.Items.INGOTS_COPPER)
+                .define('s', Items.STICK)
+                .group(CopperStuff.MOD_ID)
+                .unlockedBy("copper", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(ItemRegistry.COPPER_SHOVEL.get())
+                .pattern(" c ")
+                .pattern(" s ")
+                .pattern(" s ")
+                .define('c', Tags.Items.INGOTS_COPPER)
+                .define('s', Items.STICK)
+                .group(CopperStuff.MOD_ID)
+                .unlockedBy("copper", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(ItemRegistry.COPPER_SWORD.get())
+                .pattern(" c ")
+                .pattern(" c ")
+                .pattern(" s ")
+                .define('c', Tags.Items.INGOTS_COPPER)
+                .define('s', Items.STICK)
+                .group(CopperStuff.MOD_ID)
+                .unlockedBy("copper", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
+                .save(consumer);
     }
 }

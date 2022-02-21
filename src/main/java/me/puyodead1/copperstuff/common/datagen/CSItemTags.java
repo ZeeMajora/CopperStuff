@@ -24,6 +24,6 @@ public class CSItemTags extends ItemTagsProvider {
 
     @Override
     public String getName() {
-        return "Tutorial Tags";
+        return "CopperStuff Item Tags";
     }
 }

@@ -17,5 +17,21 @@ public class CSItemModels extends ItemModelProvider {
         singleTexture(ItemRegistry.COPPER_PICKAXE.get().getRegistryName().getPath(),
                 mcLoc("item/handheld"),
                 "layer0", modLoc("item/copper_pickaxe"));
+
+        singleTexture(ItemRegistry.COPPER_AXE.get().getRegistryName().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/copper_axe"));
+
+        singleTexture(ItemRegistry.COPPER_HOE.get().getRegistryName().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/copper_hoe"));
+
+        singleTexture(ItemRegistry.COPPER_SHOVEL.get().getRegistryName().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/copper_shovel"));
+
+        singleTexture(ItemRegistry.COPPER_SWORD.get().getRegistryName().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/copper_sword"));
     }
 }

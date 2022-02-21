@@ -15,5 +15,9 @@ public class CSLanguageProvider extends LanguageProvider {
     protected void addTranslations() {
         add("itemGroup." + CopperStuff.MOD_ID, CopperStuff.MOD_NAME);
         add(ItemRegistry.COPPER_PICKAXE.get(), "Copper Pickaxe");
+        add(ItemRegistry.COPPER_AXE.get(), "Copper Axe");
+        add(ItemRegistry.COPPER_HOE.get(), "Copper Hoe");
+        add(ItemRegistry.COPPER_SHOVEL.get(), "Copper Shovel");
+        add(ItemRegistry.COPPER_SWORD.get(), "Copper Sword");
     }
 }
