@@ -5,7 +5,7 @@ on:
   - pull_request
 
 jobs:
-  setup:
+  build:
     if: "! contains(toJSON(github.event.commits.*.message), '[ci skip]')"
     runs-on: ubuntu-latest
     steps:
@@ -33,28 +33,18 @@ jobs:
         with:
           path: ~/.gradle/wrapper
           key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('**/gradle/wrapper/gradle-wrapper.properties') }}
-
-  forge_setup:
-    if: "contains(github.ref_name, 'forge')"
-    runs-on: ubuntu-latest
-    steps:
       - name: Validate no assets
+        if: "contains(github.ref_name, 'forge')"
         run: test ! -d ./src/generated
       - name: Generate assets
+        if: "contains(github.ref_name, 'forge')"
         run: ./gradlew runData
         continue-on-error: true
       - name: Validate assets
+        if: "contains(github.ref_name, 'forge')"
         run: test -d ./src/generated -a -f ./src/generated/resources/.cache/cache
-  build:
-    runs-on: ubuntu-latest
-    needs: setup
-    steps:
       - name: Build with Gradle
         run: ./gradlew build
-  upload:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - uses: actions/upload-artifact@v2
         with:
           name: dist
