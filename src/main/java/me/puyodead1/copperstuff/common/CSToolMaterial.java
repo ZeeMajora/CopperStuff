@@ -15,7 +15,7 @@ public class CSToolMaterial implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 9.0f;
+        return 6.5f;
     }
 
     @Override
